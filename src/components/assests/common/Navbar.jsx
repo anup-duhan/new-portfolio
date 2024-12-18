@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="shadow-sm shadow-[#BBBAB8]">
-      <div className="px-4 md:px-6 mx-auto bg-bgwhite flex justify-between items-center">
+      <div className="px-4  max-w-7xl mx-auto bg-bgwhite flex justify-between items-center">
         {/* Logo */}
         <div className="py-2">
           <h1>
@@ -36,9 +36,9 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-             <Logoopen/>
+              <Logoopen />
             ) : (
-             <Logoclose/>
+              <Logoclose />
             )}
           </button>
         </div>
@@ -46,11 +46,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-bgwhite overflow-hidden shadow-md transition-all duration-500 ease-in-out ${
-          isMenuOpen ? 'max-h-screen' : 'max-h-0'
-        }`}
+        className={`md:hidden bg-bgwhite absolute w-full h-screen overflow-hidden shadow-md transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-screen' : 'max-h-0'
+          }`}
       >
-        <div className="text-center px-4 py-2">
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden bg-bgwhite absolute w-full h-screen shadow-md transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-screen' : 'max-h-0'
+            } flex flex-col justify-center items-center`}
+        >
           <a href="#" className="block py-2 text-maincolor font-medium">
             HOME
           </a>
