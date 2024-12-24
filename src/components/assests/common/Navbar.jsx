@@ -42,7 +42,7 @@ const Navbar = () => {
           <Link to="/about" onClick={closeMenu} className="link-hover-effect">ABOUT</Link>
           <Link to="/Skills" onClick={closeMenu} className="link-hover-effect">SKILLS</Link>
           <Link to="/services" onClick={closeMenu} className="link-hover-effect">SERVICES</Link>
-          <Link to="/portfolio" onClick={closeMenu} className="link-hover-effect">PORTFOLIO</Link>
+          <Link to="/projects" onClick={closeMenu} className="link-hover-effect">PROJECTS</Link>
           <Link to="/contacts" onClick={closeMenu} className="link-hover-effect">CONTACTS</Link>
         </div>
 

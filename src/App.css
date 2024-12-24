@@ -19,7 +19,7 @@
   }
   
   .running {
-    animation: run 10s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    animation: run 13s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   }
   
 
@@ -60,7 +60,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #FFA500; /* Use your theme color */
+  background-color: #2E7CDF!important; /* Use your theme color */
   transition: width 0.8s ease;
 }
 
@@ -72,8 +72,20 @@
   color: #FFA500; /* Change text color on hover */
   transform: scale(1.1); /* Slightly scale up the link */
 }
+/* Customize the dots container */
+.slick-dots {
+    bottom: -20px; /* Adjust position below the slider */
+}
 
-.link-hover-effect:hover:focus {
-  outline: none; /* Optional: removes focus outline */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow on hover */
+/* Customize individual dots */
+.slick-dots li button:before {
+    font-size: 12px; /* Size of the dots */
+    color: #0E3C8A !important; /* Default dot color */
+   
+}
+
+/* Customize active dots */
+.slick-dots li.slick-active button:before {
+    color: #0E3C8A !important; /* Active dot color */
+    font-size: 10px; /* Slightly larger size for active dot */
 }

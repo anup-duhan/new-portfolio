@@ -13,6 +13,9 @@ module.exports = {
         lightblack: "#23201E",
         background : "#EDEBE9",
       },
+      boxShadow: {
+        'custom-red': '2px 0px 2px 7px #EDEBE9',
+      },
       fontSize: { 
         fourty: "40px", 
       },

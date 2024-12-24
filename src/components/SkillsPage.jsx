@@ -30,73 +30,73 @@ const SkillsPage = () => {
         </div>
       </div>
       <div className='bg-background mt-5'>
-      <div className='max-w-7xl mx-auto px-4 md:px-14 lg:px-6 py-10'>
-                <div class="overflow-hidden">
-                  <div class="running flex gap-4 justify-center items-center">
-                    
-                    <div class="min-w-[300px]">
-                    <img src={html} alt="apple" className='w-[100px]' />
-                    </div>
-            
-                    
-                    <div class="min-w-[300px]">
-                    <img src={css} alt="apple" className='w-[100px]'/>
-                    </div>
-            
-                    
-                    <div class="min-w-[300px]">
-                    <img src={bootstrap} alt="apple" className='w-[100px]'/>
-                    </div>
-            
-                    
-                    <div class="min-w-[300px]">
-                    <img src={react} alt="apple" className='w-[100px]'/>
-                    </div>
-            
-                    
-                    <div class="min-w-[300px]">
-                    <img src={vector} alt="apple" className='w-[100px]'/>
-                    </div>
-            
-                    
-                    <div class="min-w-[300px]">
-                    <img src={bootstrap} alt="apple" className='w-[100px]' />
-                    </div>
-            
-                
-                    <div class="min-w-[300px]">
-                    <img src={html} alt="apple" className='w-[100px]'/>
-                    </div>
-            
-            
-                    <div class="min-w-[300px]">
-                    <img src={javascript} alt="apple" className='w-[100px]'/>
-                    </div>
-            
-                    
-                    
-                    <div class="min-w-[300px]">
-                    <img src={css} alt="apple" className='w-[100px]' />
-                    </div>
-            
-                    
-                    <div class="min-w-[300px]">
-                    <img src={react} alt="apple" className='w-[100px]'/>
-                    </div>
+        <div className='max-w-7xl mx-auto px-4 md:px-14 lg:px-6 md:py-10'>
+          <div class="overflow-hidden">
+            <div class="running flex gap-4 justify-center items-center">
 
-                    <div class="min-w-[300px]">
-                    <img src={html} alt="apple" className='w-[100px]'/>
-                      </div>
-
-                      <div class="min-w-[300px]">
-                      <img src={bootstrap} alt="apple" className='w-[100px]'/>
-                      </div>
-                      <div class="min-w-[300px]">
-                      <img src={vector} alt="apple" className='w-[100px]' />
-                      </div>
-                  </div>
-                </div>
+              <div class="min-w-[300px]">
+                <img src={html} alt="apple" className='w-[100px]' />
               </div>
+
+
+              <div class="min-w-[300px]">
+                <img src={css} alt="apple" className='w-[100px]' />
+              </div>
+
+
+              <div class="min-w-[300px]">
+                <img src={bootstrap} alt="apple" className='w-[100px]' />
+              </div>
+
+
+              <div class="min-w-[300px]">
+                <img src={react} alt="apple" className='w-[100px]' />
+              </div>
+
+
+              <div class="min-w-[300px]">
+                <img src={vector} alt="apple" className='w-[100px]' />
+              </div>
+
+
+              <div class="min-w-[300px]">
+                <img src={bootstrap} alt="apple" className='w-[100px]' />
+              </div>
+
+
+              <div class="min-w-[300px]">
+                <img src={html} alt="apple" className='w-[100px]' />
+              </div>
+
+
+              <div class="min-w-[300px]">
+                <img src={javascript} alt="apple" className='w-[100px]' />
+              </div>
+
+
+
+              <div class="min-w-[300px]">
+                <img src={css} alt="apple" className='w-[100px]' />
+              </div>
+
+
+              <div class="min-w-[300px]">
+                <img src={react} alt="apple" className='w-[100px]' />
+              </div>
+
+              <div class="min-w-[300px]">
+                <img src={html} alt="apple" className='w-[100px]' />
+              </div>
+
+              <div class="min-w-[300px]">
+                <img src={bootstrap} alt="apple" className='w-[100px]' />
+              </div>
+              <div class="min-w-[300px]">
+                <img src={vector} alt="apple" className='w-[100px]' />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
 

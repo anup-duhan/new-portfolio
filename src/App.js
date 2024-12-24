@@ -6,6 +6,8 @@ import AboutPage from './components/AboutPage';
 import SkillsPage from './components/SkillsPage';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from './components/pages/Home';
+import Services from './components/Services';
+import ProjectsSlider from './components/ProjectsSlider';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/about' element={<AboutPage/>}/>
       <Route path='/Skills' element={<SkillsPage/>}/>
+      <Route path='/services' element={<Services/>}/>
+      <Route path='/projects' element={<ProjectsSlider/>}/>
     </Routes>
 
     </>
