@@ -32,6 +32,31 @@ export const CARDS_DATA_LIST = [
         description :'I develop cross-platform mobile applications.',
 
     },
+
+    {
+        image: webdesign,
+        title: 'UI/UX Design',
+        description :'I design pleasant and useful interfaces to improve the user experience.',
+
+    },
+    {
+        image: Appdekstop,
+        title: 'Application Desktop',
+        description :'I develop desktop software that works on Windows, MacOS and Lunix.',
+
+    },
+    {
+        image: webicon,
+        title: 'Application Web',
+        description :'I develop interactive, robust, dynamic and responsive websites.',
+
+    },
+    {
+        image: mobile,
+        title: 'Application Mobile',
+        description :'I develop cross-platform mobile applications.',
+
+    },
 ]
 
 // react slider data

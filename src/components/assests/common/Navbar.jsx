@@ -81,8 +81,8 @@ const Navbar = () => {
           <Link to="/services" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
             SERVICES
           </Link>
-          <Link to="/portfolio" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
-            PORTFOLIO
+          <Link to="/projects" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
+            PROJECTS
           </Link>
           <Link to="/contacts" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
             CONTACTS

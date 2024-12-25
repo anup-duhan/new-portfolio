@@ -3,8 +3,6 @@ import Slider from 'react-slick';
 import { PROJECT_DATA_LIST } from './assests/common/helper';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from 'react-router-dom';
-
 const ProjectsSlider = () => {
     const settings = {
         dots: true,
@@ -25,7 +23,7 @@ const ProjectsSlider = () => {
     };
 
     return (
-        <div className="md:py-12">
+        <div className="md:py-12 ">
             <h2 className='text-fourty font-bold text-center text-maincolor'> MY PROJECTS </h2>
             <div className='max-w-7xl mx-auto px-4 md:py-10'>
                 <Slider {...settings}>

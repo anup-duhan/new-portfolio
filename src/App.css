@@ -3,6 +3,10 @@
     cursor: pointer;
 }
 
+body{
+  scroll-behavior: smooth !important;
+}
+
 @keyframes run {
     0% {
       transform: translateX(1280px); /* Start off-screen to the right */
@@ -47,45 +51,38 @@
   }
 
 
-  /* In your CSS (global or component-specific) */
-.link-hover-effect {
-  position: relative;
-  transition: all 0.8s ease;
+  .slick-dots {
+    position: absolute;
+    bottom: -40px !important;
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    /* background-color: red; */
+    transition: all linear 0.5s;
 }
 
-.link-hover-effect::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #2E7CDF!important; /* Use your theme color */
-  transition: width 0.8s ease;
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    background-color: #2E7CDF;
+    border-radius: 20px;
+    transition: all linear 0.5s;
+
 }
 
-.link-hover-effect:hover::before {
-  width: 100%;
+.slick-dots .slick-active {
+    width: 30px !important;
+    border-radius: 20px;
+    background-color: #0E3C8A!important;
 }
 
-.link-hover-effect:hover {
-  color: #FFA500; /* Change text color on hover */
-  transform: scale(1.1); /* Slightly scale up the link */
-}
-/* Customize the dots container */
-.slick-dots {
-    bottom: -20px; /* Adjust position below the slider */
-}
-
-/* Customize individual dots */
 .slick-dots li button:before {
-    font-size: 12px; /* Size of the dots */
-    color: #0E3C8A !important; /* Default dot color */
-   
-}
-
-/* Customize active dots */
-.slick-dots li.slick-active button:before {
-    color: #0E3C8A !important; /* Active dot color */
-    font-size: 10px; /* Slightly larger size for active dot */
+    content: " " !important;
 }
