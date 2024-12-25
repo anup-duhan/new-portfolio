@@ -1,6 +1,13 @@
 import React from 'react'
 import boyimage from '../components/assests/images/standingboy.png'
+import resume from '../components/assests/resume.pdf'
 const HeroPage = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = resume;
+    link.download = 'Resume.pdf'; // File name to be saved as
+    link.click();
+  };
   return (
     <div className='bg-gradientBackground py-7'>
       <div className='px-4 md:px-14  mx-auto grid grid-cols-1 md:grid-cols-2'>
@@ -11,7 +18,7 @@ const HeroPage = () => {
             <button className="block w-full px-10 py-4 text-white bg-buttoncolor rounded-md font-medium text-xl md:inline md:w-auto">
               CONTACT
             </button>
-            <button className="block w-full px-10 py-4 text-textmaincolor border border-textmaincolor rounded-md font-medium text-xl md:inline md:w-auto">
+            <button  onClick={handleDownload} className="block w-full px-10 py-4 text-textmaincolor border border-textmaincolor rounded-md font-medium text-xl md:inline md:w-auto">
               RESUME
             </button>
           </div>

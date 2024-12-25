@@ -1,44 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { Backtotop } from "./icons";
+
 
 const BackToTop = () => {
-    const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-    // Show or hide the button based on scroll position
-    useEffect(() => {
-        const toggleVisibility = () => {
-            if (window.scrollY > 300) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        };
+  // Show the button when scrolling down
+  const toggleVisibility = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
 
-        window.addEventListener('scroll', toggleVisibility);
-        return () => {
-            window.removeEventListener('scroll', toggleVisibility);
-        };
-    }, []);
+  // Scroll to the top of the page and play the GIF
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  };
 
-    // Scroll to top smoothly
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
 
-    return (
-        <>
-            {isVisible && (
-                <button
-                    onClick={scrollToTop}
-                    className="fixed bottom-8 right-8 bg-maincolor text-white p-3 rounded-full shadow-lg hover:bg-hovercolor transition-all duration-300"
-                >
-                    ⬆
-                </button>
-            )}
-        </>
-    );
+  return (
+    <div>
+    {isVisible && (
+      <div className="fixed bottom-5  z-[100]   right-4 md:right-5 animate-bounce">
+        <button
+          onClick={scrollToTop}
+          className="bg-maincolor w-12 h-12 rounded-full hover:scale-110 transition-all duration-700 flex items-center justify-center border-2 border-transparent hover:border-white hover:bg-colorred"
+          aria-label="Scroll to top"
+          style={{ aspectRatio: 1 }} 
+        >
+          <Backtotop />
+        </button>
+      </div>
+    )}
+  </div>
+  
+  
+  );
 };
 
 export default BackToTop;

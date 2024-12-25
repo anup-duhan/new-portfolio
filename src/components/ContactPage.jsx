@@ -2,7 +2,7 @@ import React from 'react'
 import contactimage from '../components/assests/images/contacimage.png'
 const ContactPage = () => {
     return (
-        <div className='bg-buttoncolor py-10'>
+        <div className='bg-buttoncolor mt-20'>
             <div className='px-4 md:px-14 mx-auto grid grid-cols-1 md:grid-cols-2'>
                 <div className=''>
                     <img src={contactimage} alt="contactimage" className='w-[350px] py-10' />
