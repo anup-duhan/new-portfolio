@@ -63,7 +63,7 @@ const ContactPage = () => {
                         <div className="text-right">
                             <button
                                 type="submit"
-                                className="px-6 py-2 block w-full bg-white hover:text-white text-buttoncolor font-bold rounded-lg shadow-md hover:bg-textmaincolor transition duration-300"
+                                className="px-6 py-2 block w-full bg-white hover:text-white text-buttoncolor font-bold rounded-lg shadow-md hover:bg-rose-700 transition-all duration-500"
                             >
                                 Submit
                             </button>

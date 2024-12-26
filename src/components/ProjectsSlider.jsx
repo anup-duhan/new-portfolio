@@ -23,7 +23,7 @@ const ProjectsSlider = () => {
     };
 
     return (
-        <div className="md:py-12 ">
+        <div className=" my-12 md:mb-0 md:py-12 ">
             <h2 className='text-fourty font-bold text-center text-maincolor'> MY PROJECTS </h2>
             <div className='max-w-7xl mx-auto px-4 md:py-10'>
                 <Slider {...settings}>
@@ -40,7 +40,7 @@ const ProjectsSlider = () => {
                                 </h3>
                                 <a
                                     href={obj.Link}
-                                    className='p-2 mt-2 rounded-md hover:bg-lightblack transition-all duration-700 bg-textmaincolor font-semibold text-white text-lg text-center'
+                                    className='p-2 mt-2 rounded-md hover:bg-rose-700 transition-all duration-700 bg-textmaincolor font-semibold text-white text-lg text-center'
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

@@ -38,12 +38,17 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex gap-8 text-maincolor font-medium">
-          <Link to="/" onClick={closeMenu} className="link-hover-effect">HOME</Link>
-          <Link to="/about" onClick={closeMenu} className="link-hover-effect">ABOUT</Link>
-          <Link to="/Skills" onClick={closeMenu} className="link-hover-effect">SKILLS</Link>
-          <Link to="/services" onClick={closeMenu} className="link-hover-effect">SERVICES</Link>
-          <Link to="/projects" onClick={closeMenu} className="link-hover-effect">PROJECTS</Link>
-          <Link to="/contacts" onClick={closeMenu} className="link-hover-effect">CONTACTS</Link>
+          {['HOME', 'ABOUT', 'SKILLS', 'SERVICES', 'PROJECTS', 'CONTACTS'].map((label, idx) => (
+            <Link
+              key={idx}
+              to={`/${label.toLowerCase()}`}
+              onClick={closeMenu}
+              className="relative group font-medium text-maincolor transition-transform hover:scale-105"
+            >
+              {label}
+              <span className="absolute inset-x-0 -bottom-1 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-rose-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </Link>
+          ))}
         </div>
 
         {/* Hamburger Icon */}
@@ -69,24 +74,17 @@ const Navbar = () => {
             isMenuOpen ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <Link to="/" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
-            HOME
-          </Link>
-          <Link to="/about" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
-            ABOUT
-          </Link>
-          <Link to="/skills" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
-            SKILLS
-          </Link>
-          <Link to="/services" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
-            SERVICES
-          </Link>
-          <Link to="/projects" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
-            PROJECTS
-          </Link>
-          <Link to="/contacts" onClick={closeMenu} className="block py-2 text-maincolor font-medium link-hover-effect">
-            CONTACTS
-          </Link>
+          {['HOME', 'ABOUT', 'SKILLS', 'SERVICES', 'PROJECTS', 'CONTACTS'].map((label, idx) => (
+            <Link
+              key={idx}
+              to={`/${label.toLowerCase()}`}
+              onClick={closeMenu}
+              className="block py-2 text-maincolor font-medium relative group"
+            >
+              {label}
+              <span className="absolute inset-x-0 -bottom-1 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-rose-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </Link>
+          ))}
         </div>
       </div>
       <div className="bg-backgroundborder w-full h-[2px] max-md:relative z-50"></div>

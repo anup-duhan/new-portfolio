@@ -36,8 +36,8 @@ const Services = () => {
                         onClick={handleLoadMore}
                         className={` px-6 py-2 rounded-lg shadow-lg text-white ${
                             isLoading
-                                ? 'bg-gray-400 cursor-not-allowed'
-                                : 'bg-maincolor hover:bg-hovercolor'
+                                ? 'bg-gray-400 px-10 py-4 cursor-not-allowed'
+                                : 'bg-maincolor px-10 py-4 hover:bg-hovercolor hover:bg-rose-700 transition-all duration-500'
                         }`}
                         disabled={isLoading} // Disable the button while loading
                     >
