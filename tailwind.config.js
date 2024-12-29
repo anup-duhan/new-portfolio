@@ -21,7 +21,7 @@ module.exports = {
       },
       backgroundImage: { 
         gradientBackground: "linear-gradient(143deg, rgba(237,235,233,1) 61%, rgba(46,124,223,1) 61%)",
-        backgroundborder: "linear-gradient(90deg, hsla(0, 0%, 100%, 0), #000000 50.78%, hsla(0, 0%, 100%, 0))",
+        backgroundborder: "linear-gradient(90deg, hsla(0, 0%, 100%, 0), #be123c 50.78%, hsla(0, 0%, 100%, 0))",
       },
       
     },

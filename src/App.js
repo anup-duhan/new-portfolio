@@ -1,3 +1,7 @@
+
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/assests/common/Navbar';
@@ -13,6 +17,14 @@ import ContactPage from './components/ContactPage';
 import BackToTop from './components/assests/common/BackTOTOp';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      easing: 'ease-in-out', // Easing type
+      once: true, // Whether animation should happen only once
+      mirror: false, // Whether elements should animate out while scrolling past them
+    });
+  }, []);
   return (
     <>
     <BackToTop/>

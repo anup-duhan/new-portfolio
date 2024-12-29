@@ -8,10 +8,13 @@ import react from '../components/assests/images/🦆 icon _React_.png'
 import vector from '../components/assests/images/Vector.png'
 const SkillsPage = () => {
   return (
-    <div className='py-10'>
+    <div className=''>
       <div className='px-4 md:px-14 mx-auto grid grid-cols-1 md:grid-cols-2 '>
-        <div className=''>
-          <h3 className='text-fourty font-bold text-textmaincolor'> SKILLS</h3>
+        <div data-aos="fade-down-right">
+          <div className=" md:mt-16">
+            <h2 className="text-textmaincolor text-fourty font-bold">SKILLS</h2>
+            <div className="w-36 h-1  bg-textmaincolor  "></div>
+          </div>
           <div>
             <p className='text-2xl  font-semibold mt-5'>HTML/HTML5</p>
             <input type="range" class="range-input w-[90%] accents" max="100" min="0" value="90" />

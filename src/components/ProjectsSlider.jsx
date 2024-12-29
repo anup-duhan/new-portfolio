@@ -23,8 +23,11 @@ const ProjectsSlider = () => {
     };
 
     return (
-        <div className=" my-12 md:mb-0 md:py-12 ">
-            <h2 className='text-fourty font-bold text-center text-maincolor'> MY PROJECTS </h2>
+        <div className=" my-12 md:mb-0 md:py-12 overflow-hidden">
+            <div className="text-center md:mt-16">
+                        <h2 className="text-textmaincolor text-fourty font-bold"> MY PROJECTS</h2> 
+                        <div className="w-40 h-1 mx-auto  bg-textmaincolor mb-12 md:mb-0 "></div>
+                    </div>
             <div className='max-w-7xl mx-auto px-4 md:py-10'>
                 <Slider {...settings}>
                     {PROJECT_DATA_LIST.map((obj, i) => (

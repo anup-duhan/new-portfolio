@@ -1,5 +1,6 @@
 import React from 'react'
 import contactimage from '../components/assests/images/contacimage.png'
+import { SendButton } from './assests/common/icons'
 const ContactPage = () => {
     return (
         <div className='bg-buttoncolor mt-20'>
@@ -63,8 +64,8 @@ const ContactPage = () => {
                         <div className="text-right">
                             <button
                                 type="submit"
-                                className="px-6 py-2 block w-full bg-white hover:text-white text-buttoncolor font-bold rounded-lg shadow-md hover:bg-rose-700 transition-all duration-500"
-                            >
+                                className="px-6 py-2 block w-full bg-maincolor hover:text-white text-white font-bold rounded-lg shadow-md hover:bg-rose-700 transition-all duration-500"
+                            > 
                                 Submit
                             </button>
                         </div>
