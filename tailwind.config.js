@@ -14,7 +14,7 @@ module.exports = {
         background : "#EDEBE9",
       },
       boxShadow: {
-        'custom-red': '2px 0px 2px 7px #EDEBE9',
+        'custom-red': '0px 4px 6px -1px rgba(35, 32, 30, 0.7), 0px 2px 4px -1px rgba(35, 32, 30, 0.5)',
       },
       fontSize: { 
         fourty: "40px", 

@@ -60,15 +60,12 @@ const ContactPage = () => {
                                 className="w-full px-4 py-2 rounded-lg shadow-sm bg-buttoncolor border border-gray-300 focus:outline-none focus:ring-1 focus:ring-textmaincolor transition-all duration-700" required
                             ></textarea>
                         </div>
-                        {/* Submit Button */}
-                        <div className="text-right">
-                            <button
-                                type="submit"
-                                className="px-6 py-2 block w-full bg-maincolor hover:text-white text-white font-bold rounded-lg shadow-md hover:bg-rose-700 transition-all duration-500"
-                            > 
-                                Submit
-                            </button>
-                        </div>
+                        <button
+                            type="submit"
+                            className="px-6 py-2 w-full  items-center justify-center gap-2 flex bg-maincolor hover:text-white text-white font-bold rounded-lg shadow-md hover:bg-rose-700 transition-all duration-500"
+                        >
+                            Submit <SendButton />
+                        </button>
                     </form>
                 </div>
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import { Link, useLocation } from 'react-router-dom';
 import { Logo, Logoclose, Logoopen } from './icons';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,8 +20,6 @@ const Navbar = () => {
     } else {
       document.body.style.overflow = 'auto'; // Enable scrolling
     }
-
-    // Cleanup to ensure no side effects when the component unmounts
     return () => {
       document.body.style.overflow = 'auto';
     };
@@ -32,9 +30,10 @@ const Navbar = () => {
       <div className="px-4 max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="py-2">
-          <h1>
+          <Link to="/">
             <Logo />
-          </h1>
+          </Link>
+
         </div>
 
         {/* Navigation Links */}
@@ -48,15 +47,13 @@ const Navbar = () => {
                 key={idx}
                 to={path}
                 onClick={closeMenu}
-                className={`relative group font-medium ${
-                  isActive ? 'text-rose-700' : 'text-maincolor'
-                } transition-transform hover:scale-105`}
+                className={`relative group font-medium ${isActive ? 'text-rose-700' : 'text-maincolor'
+                  } transition-transform hover:scale-105`}
               >
                 {label}
                 <span
-                  className={`absolute inset-x-0 -bottom-1 h-[2px] ${
-                    isActive ? 'bg-rose-700 scale-x-100' : 'bg-transparent scale-x-0'
-                  } group-hover:scale-x-100 transition-transform duration-300`}
+                  className={`absolute inset-x-0 -bottom-1 h-[2px] ${isActive ? 'bg-rose-700 scale-x-100' : 'bg-transparent scale-x-0'
+                    } group-hover:scale-x-100 transition-transform duration-300`}
                 ></span>
               </Link>
             );
@@ -77,14 +74,12 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-bgwhite absolute w-full text-center flex flex-col justify-center items-center h-screen overflow-hidden shadow-md transition-all duration-500 ease-in-out ${
-          isMenuOpen ? 'max-h-screen' : 'max-h-0'
-        }`}
+        className={`md:hidden bg-bgwhite absolute w-full text-center flex flex-col justify-center items-center h-screen overflow-hidden shadow-md transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-screen' : 'max-h-0'
+          }`}
       >
         <div
-          className={`transition-all duration-500 ease-in-out ${
-            isMenuOpen ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`transition-all duration-500 ease-in-out ${isMenuOpen ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           {['HOME', 'ABOUT', 'SKILLS', 'SERVICES', 'PROJECTS', 'CONTACTS'].map((label, idx) => {
             const path = `/${label.toLowerCase() === 'home' ? '' : label.toLowerCase()}`;
@@ -95,15 +90,13 @@ const Navbar = () => {
                 key={idx}
                 to={path}
                 onClick={closeMenu}
-                className={`block py-2 ${
-                  isActive ? 'text-rose-700' : 'text-maincolor'
-                } hover:text-rose-700 font-medium relative group`}
+                className={`block py-2 ${isActive ? 'text-rose-700' : 'text-maincolor'
+                  } hover:text-rose-700 font-medium relative group`}
               >
                 {label}
                 <span
-                  className={`absolute inset-x-0 -bottom-1 h-[2px] ${
-                    isActive ? 'bg-rose-700 scale-x-100' : 'bg-transparent scale-x-0'
-                  } group-hover:scale-x-100 transition-transform duration-300`}
+                  className={`absolute inset-x-0 -bottom-1 h-[2px] ${isActive ? 'bg-rose-700 scale-x-100' : 'bg-transparent scale-x-0'
+                    } group-hover:scale-x-100 transition-transform duration-300`}
                 ></span>
               </Link>
             );

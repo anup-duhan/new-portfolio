@@ -5,7 +5,7 @@ const HeroPage = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = resume;
-    link.download = 'Resume.pdf'; // File name to be saved as
+    link.download = 'Resume.pdf';
     link.click();
   };
   return (
