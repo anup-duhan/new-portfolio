@@ -17,15 +17,15 @@ const SkillsPage = () => {
           </div>
           <div>
             <p className='text-2xl  font-semibold mt-5'>HTML/HTML5</p>
-            <input type="range" class="range-input w-[90%] accents" max="100" min="0" value="90" />
+            <input type="range" class="range-input w-[90%] accent-[#0E3C8A]" max="100" min="0" value="90" />
             <p className='text-2xl text-black font-semibold '>CSS/CSS3</p>
-            <input type="range" class="range-input w-[90%] accents" max="100" min="0" value="80" />
+            <input type="range" class="range-input w-[90%] accent-[#0E3C8A]" max="100" min="0" value="80" />
             <p className='text-2xl text-black font-semibold '>TaILWINDCSS</p>
-            <input type="range" class="range-input w-[90%] accents" max="100" min="0" value="85" />
+            <input type="range" class="range-input w-[90%] accent-[#0E3C8A]" max="100" min="0" value="85" />
             <p className='text-2xl text-black font-semibold '>BOOTSTRAP</p>
-            <input type="range" class="range-input w-[90%] accents" max="100" min="0" value="75" />
+            <input type="range" class="range-input w-[90%] accent-[#0E3C8A]" max="100" min="0" value="75" />
             <p className='text-2xl text-black font-semibold '>REACT JS</p>
-            <input type="range" class="range-input w-[90%] accents" max="100" min="0" value="90" />
+            <input type="range" class="range-input w-[90%] accent-[#0E3C8A]" max="100" min="0" value="90" />
           </div>
         </div>
         <div className='flex justify-center items-center'>

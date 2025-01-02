@@ -20,8 +20,18 @@ module.exports = {
         fourty: "40px", 
       },
       backgroundImage: { 
-        gradientBackground: "linear-gradient(143deg, rgba(237,235,233,1) 61%, rgba(46,124,223,1) 61%)",
+        gradientBackground: "linear-gradient(143deg, rgba(237,235,233,1) 61%, rgb(209, 213, 219) 61%)",
         backgroundborder: "linear-gradient(90deg, hsla(0, 0%, 100%, 0), #be123c 50.78%, hsla(0, 0%, 100%, 0))",
+        gradientBg: "linear-gradient(143deg, rgb(209, 213, 219) 61%, rgba(237,235,233,1) 61%)",
+      },
+      animation: {
+        progress: 'progress 3s ease-in-out forwards',
+      },
+      keyframes: {
+        progress: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
       },
       
     },

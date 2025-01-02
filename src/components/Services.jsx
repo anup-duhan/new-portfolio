@@ -19,11 +19,11 @@ const Services = () => {
                 <h2 className="text-textmaincolor text-fourty font-bold">SERVICES</h2>
                 <div className="w-40 h-1 mx-auto bg-textmaincolor"></div>
             </div>
-            <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 py-8 gap-10">
+            <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 py-8 gap-3">
                 {CARDS_DATA_LIST.slice(0, visibleCards).map((obj, i) => (
                     <div
                         key={i}
-                        className="shadow-custom-red px-7 py-10 rounded-lg gap-4 flex justify-start flex-col bg-white transition-transform  duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-rose-700 cursor-pointer"
+                        className="shadow-custom-red px-7 py-10 rounded-lg gap-4 flex justify-start flex-col bg-white transition-transform  duration-500 transform hover:scale-105 hover:shadow-base hover:shadow-rose-700 cursor-pointer"
                         data-aos="zoom-in">
                         <img
                             src={obj.image}
