@@ -15,22 +15,14 @@ const HeroPage = () => {
           <h1 className='text-textmaincolor font-extrabold py-5 text-5xl md:text-6xl md:pt-[140px]'> ANUP DUHAN</h1>
           <p className='text-fourty text-black font-bold md:pt-5 leading-tight'> I am <span className='text-textmaincolor'> Frontend Developer</span></p>
           <div className="flex flex-col gap-2 md:flex md:flex-row md:gap-14 py-5 md:pt-12">
-            <button className="group relative block w-full px-10 py-4 text-white bg-maincolor rounded-md font-medium text-xl md:inline md:w-auto overflow-hidden">
-              <span className="absolute left-0 top-0 h-32 w-32 -translate-y-2 translate-x-12 rotate-45 bg-white opacity-[3%]"></span>
-              <span className="absolute left-0 top-0 -mt-1 h-48 w-48 -translate-x-56 -translate-y-24 rotate-45 bg-rose-700 opacity-100 transition-all duration-500 ease-in-out group-hover:-translate-x-8"></span>
-              <span className="relative z-10 text-white transition-colors duration-200 ease-in-out group-hover:text-black">
-                CONTACT
-              </span>
-              <span className="absolute inset-0 rounded-md border-2 border-transparent"></span>
+            <button className="relative px-6 py-3 text-white font-medium text-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-md hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-500">
+              CONTACT
             </button>
-
-            <button onClick={handleDownload} className="group relative block w-full px-10 py-4 text-white bg-maincolor rounded-md font-medium text-xl md:inline md:w-auto overflow-hidden">
-              <span className="absolute left-0 top-0 h-32 w-32 -translate-y-2 translate-x-12 rotate-45 bg-white opacity-[3%]"></span>
-              <span className="absolute left-0 top-0 -mt-1 h-48 w-48 -translate-x-56 -translate-y-24 rotate-45 bg-rose-700 opacity-100 transition-all duration-500 ease-in-out group-hover:-translate-x-8"></span>
-              <span className="relative z-10 text-white transition-colors duration-200 ease-in-out group-hover:text-black">
-                RESUME
-              </span>
-              <span className="absolute inset-0 rounded-md border-2 border-transparent"></span>
+            <button
+              onClick={handleDownload}
+              className="relative px-6 py-3  text-white font-medium text-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-md hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-500"
+            >
+              RESUME
             </button>
           </div>
 

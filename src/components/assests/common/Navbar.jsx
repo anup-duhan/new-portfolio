@@ -33,7 +33,6 @@ const Navbar = () => {
           <Link to="/">
             <Logo />
           </Link>
-
         </div>
 
         {/* Navigation Links */}
@@ -47,13 +46,13 @@ const Navbar = () => {
                 key={idx}
                 to={path}
                 onClick={closeMenu}
-                className={`relative group font-medium ${isActive ? 'text-rose-700' : 'text-maincolor'
-                  } transition-transform hover:scale-105`}
+                className={`relative group font-medium ${isActive ? 'text-rose-700' : 'text-maincolor'}
+                  transition-transform duration-300 ease-in-out hover:scale-105`}
               >
                 {label}
                 <span
-                  className={`absolute inset-x-0 -bottom-1 h-[2px] ${isActive ? 'bg-rose-700 scale-x-100' : 'bg-transparent scale-x-0'
-                    } group-hover:scale-x-100 transition-transform duration-300`}
+                  className={`absolute inset-x-0 -bottom-1 h-[2px] ${isActive ? 'bg-rose-700 scale-x-100' : 'bg-transparent scale-x-0'}
+                    group-hover:scale-x-100 transition-transform duration-300`}
                 ></span>
               </Link>
             );
@@ -90,13 +89,13 @@ const Navbar = () => {
                 key={idx}
                 to={path}
                 onClick={closeMenu}
-                className={`block py-2 ${isActive ? 'text-rose-700' : 'text-maincolor'
-                  } hover:text-rose-700 font-medium relative group`}
+                className={`block py-2 ${isActive ? 'text-rose-700' : 'text-maincolor'}
+                  hover:text-rose-700 font-medium relative group`}
               >
                 {label}
                 <span
-                  className={`absolute inset-x-0 -bottom-1 h-[2px] ${isActive ? 'bg-rose-700 scale-x-100' : 'bg-transparent scale-x-0'
-                    } group-hover:scale-x-100 transition-transform duration-300`}
+                  className={`absolute inset-x-0 -bottom-1 h-[2px] ${isActive ? 'bg-rose-700 scale-x-100' : 'bg-transparent scale-x-0'}
+                    group-hover:scale-x-100 transition-transform duration-300`}
                 ></span>
               </Link>
             );

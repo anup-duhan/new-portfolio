@@ -33,7 +33,7 @@ const BackToTop = () => {
       <div className="fixed bottom-5  z-[100]   right-4 md:right-5 animate-bounce">
         <button
           onClick={scrollToTop}
-          className="bg-maincolor w-12 h-12 rounded-full hover:scale-110 transition-all duration-700 flex items-center justify-center border-2 border-transparent hover:bg-rose-700 hover:shadow-md hover:shadow-textmaincolor"
+          className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 w-12 h-12 rounded-full hover:scale-110 transition-all duration-700 flex items-center justify-center border-2 border-transparent hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-500"
           aria-label="Scroll to top"
           style={{ aspectRatio: 1 }} 
         >

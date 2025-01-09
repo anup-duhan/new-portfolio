@@ -14,7 +14,7 @@ const Services = () => {
     };
 
     return (
-        <div className="">
+        <div className="mt-6 md:mt-0">
             <div className="text-center md:mt-16">
                 <h2 className="text-textmaincolor text-fourty font-bold">SERVICES</h2>
                 <div className="w-40 h-1 mx-auto bg-textmaincolor"></div>
@@ -43,10 +43,10 @@ const Services = () => {
                 <div className="text-center">
                     <button
                         onClick={handleLoadMore}
-                        className={`px-6 py-2 rounded-lg shadow-lg text-white ${
+                        className={`px-10 py-3 rounded-lg shadow-lg text-white ${
                             isLoading
-                                ? 'bg-gray-400 px-10 py-4 cursor-not-allowed'
-                                : 'bg-maincolor px-10 py-4 hover:bg-rose-700 hover:shadow-rose-700 transition-all duration-500'
+                                ? 'bg-red-600 px-10 py-3 cursor-not-allowed'
+                                : 'bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-md hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-300'
                         }`}
                         disabled={isLoading} // Disable the button while loading
                     >

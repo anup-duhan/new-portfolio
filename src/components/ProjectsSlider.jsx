@@ -42,8 +42,8 @@ const ProjectsSlider = () => {
                                     {obj.title}
                                 </h3>
                                 <a
-                                    href={obj.Link}
-                                    className='p-2 mt-2 rounded-md hover:bg-rose-700 transition-all duration-700 bg-textmaincolor font-semibold text-white text-lg text-center'
+                                    href={obj.Link} 
+                                    className='p-2 mt-2 rounded-md hover:bg-rose-700  transition-all duration-700 bg-textmaincolor font-semibold text-white text-lg text-center'
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
