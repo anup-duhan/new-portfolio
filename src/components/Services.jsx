@@ -24,7 +24,7 @@ const Services = () => {
                     <div
                         key={i}
                         className="shadow-custom-red px-7 py-10 rounded-lg gap-4 flex justify-start flex-col bg-white transition-transform  duration-500 transform hover:scale-105 hover:shadow-base hover:shadow-rose-700 cursor-pointer"
-                        data-aos="zoom-in">
+                        data-aos="fade-up-right">
                         <img
                             src={obj.image}
                             alt="webdesign"

@@ -42,7 +42,8 @@ const ContactPage = () => {
                         alt="contactimage"
                         className="w-[350px] py-10"
                     />
-                    <div className='flex gap-5  justify-center items-center  md:justify-start md:items-start my-2'>
+                    <div className='flex gap-5  justify-center items-center  md:justify-start md:items-start my-2' data-aos="fade-up"
+     data-aos-duration="3000">
                         <a
                             href="https://www.facebook.com/anupduhan.duhan"
                             target="_blank"
@@ -70,7 +71,7 @@ const ContactPage = () => {
                     </div>
                 </div>
                 <div className="flex justify-center items-center">
-                    <form onSubmit={submitHandler} className="w-full p-8 rounded-lg">
+                    <form onSubmit={submitHandler} className="w-full p-8 rounded-lg" data-aos="zoom-in">
                         <h2 className="text-2xl font-bold text-white mb-6">
                             CONTACT ME
                         </h2>

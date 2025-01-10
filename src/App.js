@@ -39,6 +39,7 @@ function App() {
 
   return (
     <>
+    <div className='overflow-clip'>
       <BackToTop />
       <Navbar />
       <Routes>
@@ -50,7 +51,9 @@ function App() {
         <Route path="/contacts" element={<ContactPage />} />
       </Routes>
       <Footer />
+      </div>
     </>
+   
   );
 }
 
