@@ -43,7 +43,7 @@ const ContactPage = () => {
                         className="w-[350px] py-10"
                     />
                     <div className='flex gap-5  justify-center items-center  md:justify-start md:items-start my-2' data-aos="fade-up"
-     data-aos-duration="3000">
+                        data-aos-duration="3000">
                         <a
                             href="https://www.facebook.com/anupduhan.duhan"
                             target="_blank"
@@ -53,7 +53,7 @@ const ContactPage = () => {
                             <Facebook />
                         </a>
                         <a
-                            href="https://www.whatsapp.com"
+                            href="https://wa.me/9671444736"
                             target="_blank"
                             rel="noopener noreferrer"
                             className='bg-white w-9 h-9 rounded-full hover:scale-110 hover:bg-green-400 transition-all duration-700 flex justify-center items-center'
@@ -110,7 +110,7 @@ const ContactPage = () => {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 placeholder="Enter your email"
-                                className="w-full px-4 py-2 text-white border-b border-white bg-lightblack caret-white shadow-sm placeholder-gray-400 focus:outline-none focus:border-b-rose-700 focus:ring-0 focus-visible:ring-0 focus:border-t-transparent focus:border-l-transparent focus:border-r-transparent transition-all duration-300"
+                                className="w-full px-4 py-2 text-white border-b border-white bg-lightblack  caret-white shadow-sm placeholder-gray-400 focus:outline-none focus:border-b-rose-700  transition-all duration-300"
                                 required
                             />
                         </div>

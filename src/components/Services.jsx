@@ -43,7 +43,7 @@ const Services = () => {
                 <div className="text-center">
                     <button
                         onClick={handleLoadMore}
-                        className={`px-10 py-3 rounded-lg shadow-lg text-white ${
+                        className={`px-10 py-3 rounded-lg mb-1 shadow-lg text-white ${
                             isLoading
                                 ? 'bg-red-600 px-10 py-3 cursor-not-allowed'
                                 : 'bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-md hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-300'
