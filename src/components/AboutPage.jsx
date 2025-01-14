@@ -20,7 +20,7 @@ const AboutPage = () => {
                         <div className="w-40 h-1  bg-textmaincolor mb-6 md:mb-0" data-aos="fade-up-right"></div>
                     </div>
 
-                    <p className='text-lightblack text-xl md:text-2xl text-justify md:mt-7'> I am Anup Duhan Front End Developer with 6 months of experience. My passion for web development began in march 2024 and from then on, I did everything I could to break into this path, while having fun on the various projects developed. My experience acquired over the course of the projects allows me to better understand the expectations of a client and to respond precisely to the need requested according to the field of activity. I completed MCA in 2023.
+                    <p className='text-lightblack text-xl md:text-2xl text-justify bg-gray-100 p-5 rounded-md md:mt-7'> I am Anup Duhan Front End Developer with 6 months of experience. My passion for web development began in march 2024 and from then on, I did everything I could to break into this path, while having fun on the various projects developed. My experience acquired over the course of the projects allows me to better understand the expectations of a client and to respond precisely to the need requested according to the field of activity. I completed MCA in 2023.
                     </p>
                     <button
                         onClick={handleDownload}

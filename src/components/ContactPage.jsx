@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import contactimage from '../components/assests/images/contacimage.png';
 import { Facebook, Instagram, SendButton, Whatsapp } from './assests/common/icons';
+import emailjs from 'emailjs-com';
+import verified from '../components/assests/images/verified.gif'
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -17,21 +19,39 @@ const ContactPage = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        setShowPopup(true); // Show the popup
+        console.log('Form Data:', formData);
 
-        // Clear form fields after submission
-        setFormData({
-            name: '',
-            email: '',
-            message: ''
-        });
+        // Send the form data with emailjs
+        emailjs
+            .sendForm(
+                'service_5f78p17',  // Replace with your EmailJS service ID
+                'template_d8tfytw',  // Replace with your EmailJS template ID
+                e.target,             // The form element
+                'xb0mdTrfSBY4WC1Dn'        // Replace with your EmailJS user ID
+            )
+            .then(
+                (result) => {
+                    console.log('Email sent successfully:', result.text);
+                    setShowPopup(true); // Show the popup
 
-        // Hide the popup after 3 seconds
-        setTimeout(() => {
-            setShowPopup(false);
-        }, 3000);
+                    // Clear form fields after submission
+                    setFormData({
+                        name: '',
+                        email: '',
+                        message: '',
+                        number: ''
+                    });
+
+                    // Hide the popup after 3 seconds
+                    setTimeout(() => {
+                        setShowPopup(false);
+                    }, 2000);
+                },
+                (error) => {
+                    console.log('Error sending email:', error.text);
+                }
+            );
     };
-
 
     return (
         <div className="bg-lightblack mt-20">
@@ -42,7 +62,7 @@ const ContactPage = () => {
                         alt="contactimage"
                         className="w-[350px] py-10"
                     />
-                    <div className='flex gap-5  justify-center items-center  md:justify-start md:items-start my-2' data-aos="fade-up"
+                    <div className='flex gap-5 justify-center items-center md:justify-start md:items-start my-2' data-aos="fade-up"
                         data-aos-duration="3000">
                         <a
                             href="https://www.facebook.com/anupduhan.duhan"
@@ -91,7 +111,7 @@ const ContactPage = () => {
                                 onChange={handleInputChange}
                                 maxLength={5}
                                 placeholder="Enter your name"
-                                className="w-full px-4 py-2 text-white border-b border-white bg-lightblack caret-white shadow-sm placeholder-gray-400 focus:outline-none focus:border-b-rose-700 focus:ring-0 focus-visible:ring-0 focus:border-t-transparent focus:border-l-transparent focus:border-r-transparent transition-all duration-300"
+                                className="w-full px-4 py-2 text-white border-b border-white bg-lightblack caret-white shadow-sm placeholder-gray-400 focus:border-b-rose-700 outline-none transition-all duration-300"
                                 required
                             />
                         </div>
@@ -110,10 +130,33 @@ const ContactPage = () => {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 placeholder="Enter your email"
-                                className="w-full px-4 py-2 text-white border-b border-white bg-lightblack  caret-white shadow-sm placeholder-gray-400 focus:outline-none focus:border-b-rose-700  transition-all duration-300"
+                                className="w-full px-4 py-2 text-white border-b border-white bg-lightblack caret-white shadow-sm placeholder-gray-400 focus:outline-none focus:border-b-rose-700 outline-none transition-all duration-300"
                                 required
                             />
                         </div>
+                        {/* // mobile number  */}
+                        <div className="mb-4">
+                            <label
+                                htmlFor="number"
+                                className="block text-white font-medium mb-2"
+                            >
+                                Mobile Number
+                            </label>
+                            <input
+                                type="number"
+                                id="number"
+                                name="number"
+                                value={formData.number}
+                                onChange={(e) => {
+                                    const value = e.target.value.slice(0, 10); // Limit to 10 digits
+                                    setFormData({ ...formData, number: value });
+                                }}
+                                placeholder="Enter your mobile number"
+                                className="w-full px-4 py-2 text-white border-b border-white bg-lightblack caret-white shadow-sm placeholder-gray-400 focus:outline-none focus:border-b-rose-700 outline-none transition-all duration-300"
+                                required
+                            />
+                        </div>
+
                         {/* Message */}
                         <div className="mb-4">
                             <label
@@ -129,13 +172,13 @@ const ContactPage = () => {
                                 onChange={handleInputChange}
                                 placeholder="Write your message"
                                 rows="1"
-                                className="w-full px-4 py-2 text-white border-b border-white bg-lightblack caret-white shadow-sm placeholder-gray-400 focus:outline-none focus:border-b-rose-700 focus:ring-0 focus-visible:ring-0 focus:border-t-transparent focus:border-l-transparent focus:border-r-transparent transition-all duration-300"
+                                className="w-full px-4 py-2 text-white border-b border-white bg-lightblack caret-white shadow-sm placeholder-gray-400 focus:outline-none focus:border-b-rose-700 outline-none transition-all duration-300"
                                 required
                             ></textarea>
                         </div>
                         <button
                             type="submit"
-                            className="px-6 py-2 w-full items-center justify-center gap-2 flex bg-gradient-to-r from-purple-500 via-pink-500 to-red-500  hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-300 text-black font-bold rounded-lg "
+                            className="px-6 py-2 w-full items-center justify-center gap-2 flex bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-300 text-black font-bold rounded-lg "
                         >
                             Submit <SendButton />
                         </button>
@@ -143,8 +186,9 @@ const ContactPage = () => {
                 </div>
             </div>
             {showPopup && (
-                <div className="fixed z-100 top-1/2 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-10 py-5 rounded-lg shadow-lg">
-                    Form Data Submitted Successfully!
+                <div className="fixed flex justify-center items-center z-100 top-1/2 left-1/2 transform -translate-x-1/2 bg-white text-black font-bold px-10 py-5 rounded-lg shadow-lg">
+                    <img src={verified} alt="tickicon" className='w-12' />
+                    <h1 className='text-green-600 font-bold'>Form Data Submitted Successfully! </h1>
                 </div>
             )}
         </div>

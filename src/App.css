@@ -94,3 +94,7 @@ body {
 }
 
 
+::selection {
+  background-color: magenta;
+  color:blue;
+}
