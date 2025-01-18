@@ -19,11 +19,11 @@ const Services = () => {
                 <h2 className="text-textmaincolor text-fourty font-bold">SERVICES</h2>
                 <div className="w-40 h-1 mx-auto bg-textmaincolor"></div>
             </div>
-            <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 py-8 gap-3">
+            <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 py-8 gap-5">
                 {CARDS_DATA_LIST.slice(0, visibleCards).map((obj, i) => (
                     <div
                         key={i}
-                        className="shadow-custom-red px-7 py-10 rounded-lg gap-4 flex justify-start flex-col bg-white transition-transform  duration-500 transform hover:scale-105 hover:shadow-base hover:shadow-rose-700 cursor-pointer"
+                        className="shadow-custom-red px-7 py-10 rounded-tl-3xl rounded-br-3xl  gap-4 flex justify-start flex-col bg-white transition-transform  duration-500 transform hover:scale-105 hover:shadow-base hover:shadow-rose-700 cursor-pointer"
                         data-aos="fade-up-right">
                         <img
                             src={obj.image}
@@ -45,8 +45,8 @@ const Services = () => {
                         onClick={handleLoadMore}
                         className={`px-10 py-3 rounded-lg mb-1 shadow-lg text-white ${
                             isLoading
-                                ? 'bg-red-600 px-10 py-3 cursor-not-allowed'
-                                : 'bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-md hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-300'
+                                ? 'bg-red-600 px-10 py-3 shadow-sm shadow-black cursor-not-allowed'
+                                : ' shadow-sm shadow-black bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-md hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-300'
                         }`}
                         disabled={isLoading} // Disable the button while loading
                     >

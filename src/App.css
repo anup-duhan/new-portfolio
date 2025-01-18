@@ -98,3 +98,20 @@ body {
   background-color: magenta;
   color:blue;
 }
+
+/* CSS for the popup animation */
+@keyframes hideLine {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.animate-line {
+  animation: hideLine 4s forwards; /* Line will disappear in 4 seconds */
+}
+
+
+

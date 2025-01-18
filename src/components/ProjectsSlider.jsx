@@ -43,7 +43,7 @@ const ProjectsSlider = () => {
                                 </h3>
                                 <a
                                     href={obj.Link} 
-                                    className='p-2 mt-2 rounded-md hover:bg-rose-700  transition-all duration-700 bg-textmaincolor font-semibold text-white text-lg text-center'
+                                    className='p-2 mt-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-md hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 transition-all duration-500 font-semibold text-white text-lg text-center'
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
