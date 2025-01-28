@@ -1,13 +1,27 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="bg-lightblack text-white bg-opacity-90 z-[100] py-3 font-semibold text-center text-sm md:text-base">
-      <h2>Developed by Anup Duhan & Copyright &copy; by Codewide, Hisar | {currentYear} All Right Reserved</h2>
-    </div>
-  )
-}
+    <footer 
+      className="bg-lightblack text-white bg-opacity-90 z-[100] py-3 font-semibold text-center text-sm md:text-base"
+      aria-label="Site Footer"
+    >
+      <p>
+        Developed by <span className="font-bold">Anup Duhan</span> &copy; by{' '}
+        <a
+          href="https://www.codewide.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          Codewide, Hisar
+        </a>{' '}
+        | {currentYear} All Rights Reserved
+      </p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

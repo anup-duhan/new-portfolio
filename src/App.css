@@ -113,5 +113,16 @@ body {
   animation: hideLine 4s forwards; /* Line will disappear in 4 seconds */
 }
 
+@keyframes bounceUpAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 
+.animate-bounce-up-and-down {
+  animation: bounceUpAndDown 1.5s ease-in-out infinite;
+}
 
